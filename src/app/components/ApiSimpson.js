@@ -3,15 +3,21 @@ import { useState } from "react";
 import { getSimpson } from "../actions/getSimpson";
 import Image from "next/image";
 
+import { showLoading, hideLoading } from "loading-request";
+import "loading-request/dist/index.css";
+
 export default function ApiSimpson() {
   const [data, setData] = useState(null);
 
   const handleGetSimpson = async () => {
+    showLoading({ message: "Cargando API..." });
     try {
       const data = await getSimpson();
       setData(data);
     } catch (error) {
       console.error("Error al obtener los datos:", error);
+    } finally {
+      hideLoading();
     }
   };
 

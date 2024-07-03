@@ -4,7 +4,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Consumir la API de Simpson con Next.js",
+  title: "loading-request :: Consumir la API de Simpson con Next.js",
   description: "Aprende a consumir la API de Simpson con Next.js",
 };
 
