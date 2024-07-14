@@ -10,7 +10,7 @@ export default function ApiSimpson() {
   const [data, setData] = useState(null);
 
   const handleGetSimpson = async () => {
-    showLoading({ message: "Cargando API..." });
+    showLoading({ message: "Cargando API...", textLoadingSize: "25px" });
     try {
       const data = await getSimpson();
       setData(data);
