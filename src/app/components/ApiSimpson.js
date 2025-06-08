@@ -4,7 +4,6 @@ import { getSimpson } from "../actions/getSimpson";
 import Image from "next/image";
 
 import { showLoading, hideLoading } from "loading-request";
-import "loading-request/dist/index.css";
 
 export default function ApiSimpson() {
   const [data, setData] = useState(null);
